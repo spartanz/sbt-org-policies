@@ -1,4 +1,4 @@
-package scalaz.build
+package spartanz.sbtorgpolicies
 
 import sbt._, Keys._
 import org.scalafmt.sbt.ScalafmtPlugin.autoImport.scalafmtOnCompile

@@ -1,0 +1,3 @@
+enablePlugins(OrgPoliciesPlugin)
+
+name := "scalafmt"

@@ -1,3 +1,0 @@
-enablePlugins(ScalazPlugin)
-
-name := "scalafmt"

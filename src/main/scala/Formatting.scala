@@ -1,4 +1,4 @@
-package scalaz.build
+package spartanz.sbtorgpolicies
 
 import java.nio.file.{ Files, Paths }
 

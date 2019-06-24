@@ -1,11 +1,11 @@
-package scalaz.build
+package spartanz.sbtorgpolicies
 
 import sbt._
 import Keys._
 import de.heikoseeberger.sbtheader.HeaderPlugin
 import org.scalafmt.sbt.ScalafmtPlugin
 
-object ScalazPlugin extends AutoPlugin {
+object OrgPoliciesPlugin extends AutoPlugin {
 
   override def trigger = allRequirements
 
@@ -16,9 +16,9 @@ object ScalazPlugin extends AutoPlugin {
       Publication.buildSettings ++
       Formatting.buildSettings ++
       Seq(
-        organization := "org.scalaz",
-        organizationName := "Scalaz",
-        startYear := Some(2018),
+        organization := "org.spartanz",
+        organizationName := "Spartanz",
+        startYear := Some(2019),
         licenses += ("Apache-2.0", new URL(
           "https://www.apache.org/licenses/LICENSE-2.0.txt"
         ))

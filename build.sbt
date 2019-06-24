@@ -2,8 +2,8 @@ import sbt._
 
 enablePlugins(ScriptedPlugin)
 
-organization := "org.scalaz"
-name         := "scalaz-sbt"
+organization := "org.spartanz"
+name         := "sbt-org-policies"
 version      := "0.1-SNAPSHOT"
 scalaVersion := "2.12.8"
 sbtPlugin    := true
