@@ -6,6 +6,15 @@ organization := "org.spartanz"
 name := "sbt-org-policies"
 homepage := Some(url("https://github.com/spartanz/sbt-org-policies"))
 licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
+developers := List(
+  Developer(
+      "vil1",
+      "Valentin Kasas",
+      "valentin.kasas@gmail.com",
+      url("https://kanaka.io")
+    )
+  )
+
 scalaVersion := "2.12.8"
 sbtPlugin := true
 
