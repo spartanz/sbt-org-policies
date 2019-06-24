@@ -7,5 +7,20 @@ dist: xenial
 jdk:
   - openjdk8
 
-script:
-  - sbt ^scripted
+before_install:
+  - git fetch --tags
+
+stages:
+  - name: test
+  - name: release
+    if: ((branch = master AND type = push) OR (tag IS present)) AND NOT fork
+
+jobs:
+  include:
+    # stage="test" if no stage is specified
+    - env: TEST="compile"
+      script: sbt ^scripted
+    # run ci-release only if previous stages passed
+    - stage: release
+      script: sbt ci-release
+
