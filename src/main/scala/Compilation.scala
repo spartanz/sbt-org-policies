@@ -22,12 +22,12 @@ object Compilation {
       "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/snapshots")
     ),
     libraryDependencies ++= compilerPlugins ++ Seq(
-      "com.github.ghik" %% "silencer-lib" % silencerVersion % Provided,
-      "org.scalacheck"  %% "scalacheck"   % "1.14.0"        % Test
+      "com.github.ghik" % "silencer-lib" % silencerVersion % Provided cross CrossVersion.full,
+      "org.scalacheck" %% "scalacheck"   % "1.14.0"        % Test
     )
   )
 
-  val silencerVersion = "1.4.1"
+  val silencerVersion = "1.4.4"
 
   // borrowed from https://tpolecat.github.io/2017/04/25/scalac-flags.html
   lazy val stdScalacOptions = Seq(
@@ -94,8 +94,8 @@ object Compilation {
   }
 
   val compilerPlugins = Seq(
-    compilerPlugin("org.typelevel"          %% "kind-projector"  % "0.10.3"),
+    compilerPlugin("org.typelevel"          %% "kind-projector"  % "0.11.0" cross CrossVersion.full),
     compilerPlugin("com.github.tomasmikula" %% "pascal"          % "0.3.5"),
-    compilerPlugin("com.github.ghik"        %% "silencer-plugin" % silencerVersion)
+    compilerPlugin("com.github.ghik"         % "silencer-plugin" % silencerVersion cross CrossVersion.full)
   )
 }
